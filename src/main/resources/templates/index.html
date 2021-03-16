@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Listado</title>
+</head>
+<body>
+	<p th:text="Hello"></p>
+	
+	<table>
+		<th:block th:each="per : ${personas}">
+			<tr>
+				<td th:text="${per.idPerson}"></td>
+				<td th:text="${per.name}"></td>
+				<td th:text="${per.lastName}"></td>
+			</tr>
+		</th:block>
+	</table>
+</body>
+</html>
